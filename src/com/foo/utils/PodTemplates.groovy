@@ -3,7 +3,8 @@ package com.foo.utils
 public void dockerTemplate(body) {
   podTemplate(
         containers: [containerTemplate(name: 'docker', image: 'docker', command: 'sleep', args: '99d')]
-        //volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]) {
+        //volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]
+    ) {
     body.call()
 }
 }
